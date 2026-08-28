@@ -1,6 +1,6 @@
 # Murti 🗿 — Text & Image to 3D Asset Generator
 
-**Live: https://murti-text-to-3d.vercel.app** · **Capstone #19** — generate
+**Live: https://murti-six.vercel.app** · **Capstone #19** — generate
 game/web-ready 3D models from text prompts and images using a real,
 from-scratch-trained **latent diffusion** pipeline. The entire inference stack
 is exported to **ONNX** and runs **100% in the browser** via WebAssembly — no
