@@ -1,9 +1,10 @@
 # Murti 🗿 — Text & Image to 3D Asset Generator
 
-**Capstone #19** — generate game/web-ready 3D models from text prompts and
-images using a real, from-scratch-trained **latent diffusion** pipeline.
-The entire inference stack is exported to **ONNX** and runs **100% in the
-browser** via WebAssembly — no GPU server, no uploads.
+**Live: https://murti-text-to-3d.vercel.app** · **Capstone #19** — generate
+game/web-ready 3D models from text prompts and images using a real,
+from-scratch-trained **latent diffusion** pipeline. The entire inference stack
+is exported to **ONNX** and runs **100% in the browser** via WebAssembly — no
+GPU server, no uploads.
 
 > *Murti* (मूर্তि) — Sanskrit for "form, figure, embodiment".
 
@@ -55,10 +56,11 @@ Trained on CPU (16 threads) in ~2.5h. Metrics from the held-out evaluation:
 
 | Metric | Value |
 |---|---|
-| VAE reconstruction IoU (mean) | see `web/models/config.json` → `eval` |
-| Generation IoU vs same-class reference | see `web/models/config.json` → `eval` |
-| Chamfer distance (generated vs reference) | see `web/models/config.json` → `eval` |
-| Mesh quality | watertight, Euler χ = 2 for genus-0 shapes, 100% outward normals |
+| VAE reconstruction IoU (mean / min) | **0.933** / 0.771 |
+| Generation IoU vs same-class reference | 0.277 |
+| Chamfer distance (generated vs reference) | 0.0457 |
+| Mesh quality | watertight, Euler χ = 2 for genus-0 shapes (χ = 4 for two-component scenes), 100% outward normals |
+| GLB export | 0 errors / 0 warnings on the official Khronos glTF validator |
 
 *(The eval block is written into `web/models/config.json` at the end of every
 training run and displayed in the deployed app.)*
@@ -70,7 +72,7 @@ training run and displayed in the deployed app.)*
 pip install -r requirements.txt
 pip install torch --index-url https://download.pytorch.org/whl/cpu
 
-# tests (32 unit tests + browser marching-cubes verification)
+# tests (35 unit tests + browser marching-cubes verification)
 python -m pytest tests/ -q
 node web/js/verify-mc.mjs
 
@@ -118,16 +120,16 @@ murti/
   metrics.py       IoU, chamfer, surface sampling
   onnx_export.py   ONNX export for the browser
   train.py         full training pipeline (VAE → diffusion → clf → eval)
-tests/             32 pytest tests
+tests/             35 pytest tests
 web/               static web app (Three.js + ONNX Runtime Web)
   js/              tokenizer, inference, marching cubes, exporters, app
   models/          *.onnx + config.json (written by train.py)
-checkpoints/       *.pt weights + sample exports (git-ignored)
+checkpoints/       *.pt weights + sample exports
 ```
 
 ## 🧪 Testing
 
-- **32 unit tests** cover the shape engine, tokenizer, model forward passes,
+- **35 unit tests** cover the shape engine, tokenizer, model forward passes,
   losses, DDIM sampling reproducibility, meshing, all three exporters
   (binary STL size check, glTF structure parse, OBJ counts), metrics, the
   visual-hull path, and the end-to-end pipeline.
