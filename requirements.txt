@@ -1,0 +1,10 @@
+numpy>=1.26
+scipy>=1.11
+pillow>=10.0
+scikit-image>=0.22
+onnx>=1.15
+onnxscript>=0.1
+onnxruntime>=1.17
+pytest>=8.0
+# PyTorch is installed separately (CPU wheel keeps CI light):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu

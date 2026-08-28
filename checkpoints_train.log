@@ -1,0 +1,182 @@
+[murti] device: cpu
+[murti] VAE ep 1/8 loss=0.1204 val_IoU=0.7848
+[murti] VAE ep 2/8 loss=0.0364 val_IoU=0.8414
+[murti] VAE ep 3/8 loss=0.0338 val_IoU=0.8771
+[murti] VAE ep 4/8 loss=0.0327 val_IoU=0.8863
+[murti] VAE ep 5/8 loss=0.0320 val_IoU=0.9061
+[murti] VAE ep 6/8 loss=0.0316 val_IoU=0.9113
+[murti] VAE ep 7/8 loss=0.0312 val_IoU=0.9185
+[murti] VAE ep 8/8 loss=0.0309 val_IoU=0.9290
+[murti] pre-encoding latents...
+[murti] DIFF ep 1/16 mse=0.29142
+[murti] DIFF ep 2/16 mse=0.11031
+[murti] DIFF ep 3/16 mse=0.09277
+[murti] DIFF ep 4/16 mse=0.07742
+[murti] DIFF ep 5/16 mse=0.07330
+[murti] DIFF ep 6/16 mse=0.06848
+[murti] DIFF ep 7/16 mse=0.06502
+[murti] DIFF ep 8/16 mse=0.05976
+[murti] DIFF ep 9/16 mse=0.05704
+[murti] DIFF ep 10/16 mse=0.05701
+[murti] DIFF ep 11/16 mse=0.05378
+[murti] DIFF ep 12/16 mse=0.05712
+[murti] DIFF ep 13/16 mse=0.05086
+[murti] DIFF ep 14/16 mse=0.05205
+[murti] DIFF ep 15/16 mse=0.05176
+[murti] DIFF ep 16/16 mse=0.04712
+C:\Users\devil\Downloads\murti\murti\train.py:143: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  occ, lab = occ.to(dev), torch.tensor(lab, device=dev) if isinstance(lab, torch.Tensor) else lab.to(dev)
+[murti] CLF ep 1/8 loss=2.2886 train_acc=0.390 val_acc=0.436
+[murti] CLF ep 2/8 loss=1.9511 train_acc=0.429 val_acc=0.439
+[murti] CLF ep 3/8 loss=1.7578 train_acc=0.481 val_acc=0.539
+[murti] CLF ep 4/8 loss=1.4501 train_acc=0.581 val_acc=0.598
+[murti] CLF ep 5/8 loss=1.1950 train_acc=0.671 val_acc=0.701
+[murti] CLF ep 6/8 loss=1.0382 train_acc=0.719 val_acc=0.711
+[murti] CLF ep 7/8 loss=0.9244 train_acc=0.751 val_acc=0.736
+[murti] CLF ep 8/8 loss=0.8642 train_acc=0.760 val_acc=0.729
+[murti] evaluating...
+[murti] eval: {
+  "reconstruction_iou_mean": 0.9331665197146193,
+  "reconstruction_iou_min": 0.771484375,
+  "generation_iou_vs_reference_mean": 0.27742017909729166,
+  "chamfer_distance_mean": 0.04573987907273865,
+  "n_recon": 24,
+  "n_generated": 12
+}
+[murti] exported 'a sphere' -> 4384 faces
+[murti] exported 'a cube' -> 2616 faces
+[murti] exported 'a torus' -> 3640 faces
+[murti] exported 'a rocket' -> 3992 faces
+[murti] exported 'a star' -> 2156 faces
+[murti] exported 'a snowman' -> 3688 faces
+[murti] exported 'a tree' -> 2932 faces
+[murti] exported 'a chair' -> 2440 faces
+[murti] exported 'a pyramid' -> 4096 faces
+[murti] exported 'an arch' -> 2756 faces
+[murti] exported 'a sphere on top of a cube' -> 4016 faces
+[murti] exported 'a cone next to a cylinder' -> 1600 faces
+[murti] exporting ONNX for the browser...
+C:\Users\devil\Downloads\murti\murti\onnx_export.py:65: UserWarning: Exporting a model while it is in training mode. Please ensure that this is intended, as it may lead to different behavior during inference. Calling model.eval() before export is recommended.
+  torch.onnx.export(EncoderOnnx(vae), dummy_x, os.path.join(out_dir, "encoder.onnx"),
+C:\Users\devil\Downloads\murti\murti\onnx_export.py:65: UserWarning: # 'dynamic_axes' is not recommended when dynamo=True, and may lead to 'torch._dynamo.exc.UserError: Constraints violated.' Supply the 'dynamic_shapes' argument instead if export is unsuccessful.
+  torch.onnx.export(EncoderOnnx(vae), dummy_x, os.path.join(out_dir, "encoder.onnx"),
+W0828 12:22:38.088000 26924 Lib\site-packages\torch\onnx\_internal\exporter\_compat.py:133] Setting ONNX exporter to use operator set version 18 because the requested opset_version 17 is a lower version than we have implementations for. Automatic version conversion will be performed, which may not be successful at converting to the requested version. If version conversion is unsuccessful, the opset version of the exported model will be kept at 18. Please consider setting opset_version >=18 to leverage latest ONNX features
+W0828 12:22:40.113000 26924 Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:107] torchvision is not installed. Skipping torchvision::nms
+W0828 12:22:40.115000 26924 Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:107] torchvision is not installed. Skipping torchvision::roi_align
+W0828 12:22:40.116000 26924 Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:107] torchvision is not installed. Skipping torchvision::roi_pool
+W0828 12:22:40.117000 26924 Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:107] torchvision is not installed. Skipping torchvision::deform_conv2d
+[torch.onnx] Obtain model graph for `EncoderOnnx([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `EncoderOnnx([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decompositions...
+C:\Users\devil\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\copyreg.py:105: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return cls.__new__(cls, *args)
+[torch.onnx] Run decompositions... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+The model version conversion is not supported by the onnxscript version converter and fallback is enabled. The model will be converted using the onnx C API (target version: 17).
+[torch.onnx] Optimize the ONNX graph...
+[torch.onnx] Optimize the ONNX graph... ✅
+C:\Users\devil\Downloads\murti\murti\onnx_export.py:68: UserWarning: Exporting a model while it is in training mode. Please ensure that this is intended, as it may lead to different behavior during inference. Calling model.eval() before export is recommended.
+  torch.onnx.export(DecoderOnnx(vae), dummy_z, os.path.join(out_dir, "decoder.onnx"),
+C:\Users\devil\Downloads\murti\murti\onnx_export.py:68: UserWarning: # 'dynamic_axes' is not recommended when dynamo=True, and may lead to 'torch._dynamo.exc.UserError: Constraints violated.' Supply the 'dynamic_shapes' argument instead if export is unsuccessful.
+  torch.onnx.export(DecoderOnnx(vae), dummy_z, os.path.join(out_dir, "decoder.onnx"),
+W0828 12:22:45.001000 26924 Lib\site-packages\torch\onnx\_internal\exporter\_compat.py:133] Setting ONNX exporter to use operator set version 18 because the requested opset_version 17 is a lower version than we have implementations for. Automatic version conversion will be performed, which may not be successful at converting to the requested version. If version conversion is unsuccessful, the opset version of the exported model will be kept at 18. Please consider setting opset_version >=18 to leverage latest ONNX features
+W0828 12:22:46.358000 26924 Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:107] torchvision is not installed. Skipping torchvision::nms
+W0828 12:22:46.359000 26924 Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:107] torchvision is not installed. Skipping torchvision::roi_align
+W0828 12:22:46.360000 26924 Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:107] torchvision is not installed. Skipping torchvision::roi_pool
+W0828 12:22:46.361000 26924 Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:107] torchvision is not installed. Skipping torchvision::deform_conv2d
+[torch.onnx] Obtain model graph for `DecoderOnnx([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `DecoderOnnx([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decompositions...
+C:\Users\devil\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\copyreg.py:105: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return cls.__new__(cls, *args)
+[torch.onnx] Run decompositions... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+The model version conversion is not supported by the onnxscript version converter and fallback is enabled. The model will be converted using the onnx C API (target version: 17).
+[torch.onnx] Optimize the ONNX graph...
+[torch.onnx] Optimize the ONNX graph... ✅
+C:\Users\devil\Downloads\murti\murti\onnx_export.py:71: UserWarning: Exporting a model while it is in training mode. Please ensure that this is intended, as it may lead to different behavior during inference. Calling model.eval() before export is recommended.
+  torch.onnx.export(DiffusionOnnx(diffusion), (dummy_z, dummy_t, dummy_tok),
+C:\Users\devil\Downloads\murti\murti\onnx_export.py:71: UserWarning: # 'dynamic_axes' is not recommended when dynamo=True, and may lead to 'torch._dynamo.exc.UserError: Constraints violated.' Supply the 'dynamic_shapes' argument instead if export is unsuccessful.
+  torch.onnx.export(DiffusionOnnx(diffusion), (dummy_z, dummy_t, dummy_tok),
+W0828 12:22:49.282000 26924 Lib\site-packages\torch\onnx\_internal\exporter\_compat.py:133] Setting ONNX exporter to use operator set version 18 because the requested opset_version 17 is a lower version than we have implementations for. Automatic version conversion will be performed, which may not be successful at converting to the requested version. If version conversion is unsuccessful, the opset version of the exported model will be kept at 18. Please consider setting opset_version >=18 to leverage latest ONNX features
+W0828 12:22:50.654000 26924 Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:107] torchvision is not installed. Skipping torchvision::nms
+W0828 12:22:50.658000 26924 Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:107] torchvision is not installed. Skipping torchvision::roi_align
+W0828 12:22:50.663000 26924 Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:107] torchvision is not installed. Skipping torchvision::roi_pool
+W0828 12:22:50.665000 26924 Lib\site-packages\torch\onnx\_internal\exporter\_registration.py:107] torchvision is not installed. Skipping torchvision::deform_conv2d
+[torch.onnx] Obtain model graph for `DiffusionOnnx([...]` with `torch.export.export(..., strict=False)`...
+C:\Users\devil\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\torch\_dynamo\utils.py:4231: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  return node.target(*args, **kwargs)  # type: ignore[operator]
+<eval_with_key>.39:6: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  _check_is_size = torch._check_is_size(item);  _check_is_size = None
+<eval_with_key>.39:7: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  _check_is_size_1 = torch._check_is_size(item, max = 11);  _check_is_size_1 = None
+<eval_with_key>.45:10: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  _check_is_size = torch._check_is_size(item);  _check_is_size = None
+<eval_with_key>.45:11: FutureWarning: _check_is_size will be removed in a future PyTorch release along with guard_size_oblivious.     Use _check(i >= 0) instead.
+  _check_is_size_1 = torch._check_is_size(item, max = 11);  _check_is_size_1 = None
+C:\Users\devil\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\contextlib.py:144: UserWarning: The tensor attributes self.unet.text.gru._flat_weights[0], self.unet.text.gru._flat_weights[1], self.unet.text.gru._flat_weights[2], self.unet.text.gru._flat_weights[3], self.unet.text.gru._flat_weights[4], self.unet.text.gru._flat_weights[5], self.unet.text.gru._flat_weights[6], self.unet.text.gru._flat_weights[7] were assigned during export. Such attributes must be registered as buffers using the `register_buffer` API (https://pytorch.org/docs/stable/generated/torch.nn.Module.html#torch.nn.Module.register_buffer).
+  next(self.gen)
+[torch.onnx] Obtain model graph for `DiffusionOnnx([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decompositions...
+C:\Users\devil\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\copyreg.py:105: FutureWarning: `isinstance(treespec, LeafSpec)` is deprecated, use `isinstance(treespec, TreeSpec) and treespec.is_leaf()` instead.
+  return cls.__new__(cls, *args)
+[torch.onnx] Run decompositions... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ❌
+Traceback (most recent call last):
+  File "C:\Users\devil\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\torch\onnx\_internal\exporter\_core.py", line 817, in _translate_fx_graph
+    _handle_call_function_node_with_lowering(
+  File "C:\Users\devil\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\torch\onnx\_internal\exporter\_core.py", line 599, in _handle_call_function_node_with_lowering
+    raise _errors.DispatchError(
+torch.onnx._internal.exporter._errors.DispatchError: No ONNX function found for <OpOverload(op='aten.mul', overload='Scalar')>. Failure message: No decompositions registered for the real-valued input
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\devil\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\torch\onnx\_internal\exporter\_core.py", line 1554, in export
+    onnx_program = _exported_program_to_onnx_program(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\devil\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\torch\onnx\_internal\exporter\_core.py", line 1168, in _exported_program_to_onnx_program
+    values = _translate_fx_graph(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\devil\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\torch\onnx\_internal\exporter\_core.py", line 887, in _translate_fx_graph
+    raise _errors.ConversionError(
+torch.onnx._internal.exporter._errors.ConversionError: Error when translating node %mul : [num_users=1] = call_function[target=torch.ops.aten.mul.Scalar](args = (%convert_element_type_default, -9.210340371976184), kwargs = {}). See the stack trace for more information.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\devil\Downloads\murti\murti\train.py", line 300, in <module>
+    main()
+  File "C:\Users\devil\Downloads\murti\murti\train.py", line 280, in main
+    paths = export_onnx(vae, diff, WEB_MODELS)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\devil\Downloads\murti\murti\onnx_export.py", line 71, in export_onnx
+    torch.onnx.export(DiffusionOnnx(diffusion), (dummy_z, dummy_t, dummy_tok),
+  File "C:\Users\devil\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\torch\onnx\__init__.py", line 291, in export
+    return _compat.export_compat(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\devil\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\torch\onnx\_internal\exporter\_compat.py", line 161, in export_compat
+    onnx_program = _core.export(
+                   ^^^^^^^^^^^^^
+  File "C:\Users\devil\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\torch\onnx\_internal\exporter\_flags.py", line 27, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\devil\AppData\Local\hermes\hermes-agent\venv\Lib\site-packages\torch\onnx\_internal\exporter\_core.py", line 1596, in export
+    raise _errors.ConversionError(
+torch.onnx._internal.exporter._errors.ConversionError: Failed to convert the exported program to an ONNX model. [96mThis is step 3/3[0m of exporting the model to ONNX. Next steps:
+- If there is a missing ONNX function, implement it and register it to the registry.
+- If there is an internal error during ONNX conversion, debug the error and submit a PR to PyTorch.
+- Create an error report with `torch.onnx.export(..., report=True)`, and save the ExportedProgram as a pt2 file. Create an issue in the PyTorch GitHub repository against the [96m*onnx*[0m component. Attach the error report and the pt2 model.
+
+## Exception summary
+
+<class 'torch.onnx._internal.exporter._errors.DispatchError'>: No ONNX function found for <OpOverload(op='aten.mul', overload='Scalar')>. Failure message: No decompositions registered for the real-valued input
+⬆️
+<class 'torch.onnx._internal.exporter._errors.ConversionError'>: Error when translating node %mul : [num_users=1] = call_function[target=torch.ops.aten.mul.Scalar](args = (%convert_element_type_default, -9.210340371976184), kwargs = {}). See the stack trace for more information.
+
+(Refer to the full stack trace above for more information.)

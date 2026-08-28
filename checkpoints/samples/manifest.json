@@ -1,0 +1,278 @@
+[
+  {
+    "prompt": "a sphere",
+    "stats": {
+      "vertices": 2194,
+      "faces": 4384,
+      "surface_area": 1.6687562465667725,
+      "bounds_min": [
+        -0.392875075340271,
+        -0.22478073835372925,
+        -0.3693619668483734
+      ],
+      "bounds_max": [
+        0.3927576541900635,
+        0.2857173681259155,
+        0.3704226016998291
+      ]
+    },
+    "files": [
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\00_a_sphere.glb",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\00_a_sphere.obj",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\00_a_sphere.stl"
+    ]
+  },
+  {
+    "prompt": "a cube",
+    "stats": {
+      "vertices": 1310,
+      "faces": 2616,
+      "surface_area": 1.0001697540283203,
+      "bounds_min": [
+        -0.3690434694290161,
+        0.06584268808364868,
+        -0.26011115312576294
+      ],
+      "bounds_max": [
+        0.33635371923446655,
+        0.40626829862594604,
+        0.30697476863861084
+      ]
+    },
+    "files": [
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\01_a_cube.glb",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\01_a_cube.obj",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\01_a_cube.stl"
+    ]
+  },
+  {
+    "prompt": "a torus",
+    "stats": {
+      "vertices": 1822,
+      "faces": 3640,
+      "surface_area": 1.2560933828353882,
+      "bounds_min": [
+        -0.32595711946487427,
+        -0.37958988547325134,
+        -0.29899412393569946
+      ],
+      "bounds_max": [
+        0.30412405729293823,
+        0.3806391954421997,
+        0.31822723150253296
+      ]
+    },
+    "files": [
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\02_a_torus.glb",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\02_a_torus.obj",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\02_a_torus.stl"
+    ]
+  },
+  {
+    "prompt": "a rocket",
+    "stats": {
+      "vertices": 1998,
+      "faces": 3992,
+      "surface_area": 1.5056549310684204,
+      "bounds_min": [
+        -0.30680662393569946,
+        -0.29701101779937744,
+        -0.3550774157047272
+      ],
+      "bounds_max": [
+        0.30027341842651367,
+        0.3000262379646301,
+        0.2909502387046814
+      ]
+    },
+    "files": [
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\03_a_rocket.glb",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\03_a_rocket.obj",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\03_a_rocket.stl"
+    ]
+  },
+  {
+    "prompt": "a star",
+    "stats": {
+      "vertices": 1080,
+      "faces": 2156,
+      "surface_area": 0.8095671534538269,
+      "bounds_min": [
+        -0.2585411071777344,
+        -0.18316927552223206,
+        -0.2593894898891449
+      ],
+      "bounds_max": [
+        0.27783501148223877,
+        0.16348028182983398,
+        0.25762659311294556
+      ]
+    },
+    "files": [
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\04_a_star.glb",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\04_a_star.obj",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\04_a_star.stl"
+    ]
+  },
+  {
+    "prompt": "a snowman",
+    "stats": {
+      "vertices": 1863,
+      "faces": 3688,
+      "surface_area": 1.31719172000885,
+      "bounds_min": [
+        -0.2655540406703949,
+        -0.3310047686100006,
+        -0.2808297574520111
+      ],
+      "bounds_max": [
+        0.31423306465148926,
+        0.5,
+        0.2715294361114502
+      ]
+    },
+    "files": [
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\05_a_snowman.glb",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\05_a_snowman.obj",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\05_a_snowman.stl"
+    ]
+  },
+  {
+    "prompt": "a tree",
+    "stats": {
+      "vertices": 1468,
+      "faces": 2932,
+      "surface_area": 1.0063719749450684,
+      "bounds_min": [
+        -0.29944175481796265,
+        -0.36167091131210327,
+        -0.2707788348197937
+      ],
+      "bounds_max": [
+        0.2837051749229431,
+        0.3661000728607178,
+        0.28595268726348877
+      ]
+    },
+    "files": [
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\06_a_tree.glb",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\06_a_tree.obj",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\06_a_tree.stl"
+    ]
+  },
+  {
+    "prompt": "a chair",
+    "stats": {
+      "vertices": 1222,
+      "faces": 2440,
+      "surface_area": 0.9102363586425781,
+      "bounds_min": [
+        -0.27633482217788696,
+        -0.36590611934661865,
+        -0.2733057737350464
+      ],
+      "bounds_max": [
+        0.2861796021461487,
+        0.29352807998657227,
+        0.229861319065094
+      ]
+    },
+    "files": [
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\07_a_chair.glb",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\07_a_chair.obj",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\07_a_chair.stl"
+    ]
+  },
+  {
+    "prompt": "a pyramid",
+    "stats": {
+      "vertices": 2050,
+      "faces": 4096,
+      "surface_area": 1.5992976427078247,
+      "bounds_min": [
+        -0.3233795166015625,
+        -0.27008742094039917,
+        -0.33692827820777893
+      ],
+      "bounds_max": [
+        0.37494808435440063,
+        0.2845522165298462,
+        0.3186250925064087
+      ]
+    },
+    "files": [
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\08_a_pyramid.glb",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\08_a_pyramid.obj",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\08_a_pyramid.stl"
+    ]
+  },
+  {
+    "prompt": "an arch",
+    "stats": {
+      "vertices": 1380,
+      "faces": 2756,
+      "surface_area": 0.9798842668533325,
+      "bounds_min": [
+        -0.26670801639556885,
+        -0.3126909136772156,
+        -0.2774737775325775
+      ],
+      "bounds_max": [
+        0.29918158054351807,
+        0.43828439712524414,
+        0.24440079927444458
+      ]
+    },
+    "files": [
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\09_an_arch.glb",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\09_an_arch.obj",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\09_an_arch.stl"
+    ]
+  },
+  {
+    "prompt": "a sphere on top of a cube",
+    "stats": {
+      "vertices": 2010,
+      "faces": 4016,
+      "surface_area": 1.5565495491027832,
+      "bounds_min": [
+        -0.23100432753562927,
+        -0.38846924901008606,
+        -0.258256196975708
+      ],
+      "bounds_max": [
+        0.24357110261917114,
+        0.412608802318573,
+        0.23528271913528442
+      ]
+    },
+    "files": [
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\10_a_sphere_on_top_of_a_cube.glb",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\10_a_sphere_on_top_of_a_cube.obj",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\10_a_sphere_on_top_of_a_cube.stl"
+    ]
+  },
+  {
+    "prompt": "a cone next to a cylinder",
+    "stats": {
+      "vertices": 802,
+      "faces": 1600,
+      "surface_area": 0.5709981918334961,
+      "bounds_min": [
+        -0.1602153182029724,
+        -0.41578787565231323,
+        -0.18154802918434143
+      ],
+      "bounds_max": [
+        0.1888355016708374,
+        0.3787572979927063,
+        0.11269640922546387
+      ]
+    },
+    "files": [
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\11_a_cone_next_to_a_cylinder.glb",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\11_a_cone_next_to_a_cylinder.obj",
+      "C:\\Users\\devil\\Downloads\\murti\\checkpoints\\samples\\11_a_cone_next_to_a_cylinder.stl"
+    ]
+  }
+]

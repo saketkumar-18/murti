@@ -1,0 +1,20 @@
+{
+  "steps": 1000,
+  "beta_start": 0.0001,
+  "beta_end": 0.02,
+  "latent_ch": 4,
+  "latent_res": 8,
+  "grid": 32,
+  "max_len": 12,
+  "vocab_size": 40,
+  "default_cfg": 3.0,
+  "default_ddim_steps": 25,
+  "eval": {
+    "reconstruction_iou_mean": 0.9331665197146193,
+    "reconstruction_iou_min": 0.771484375,
+    "generation_iou_vs_reference_mean": 0.27742017909729166,
+    "chamfer_distance_mean": 0.04573987907273865,
+    "n_recon": 24,
+    "n_generated": 12
+  }
+}

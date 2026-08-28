@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Murti — Text &amp; Image to 3D</title>
+<meta name="description" content="Generate 3D models from text prompts and images with latent diffusion — running entirely in your browser." />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗿</text></svg>" />
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <span class="logo">🗿</span>
+    <div>
+      <h1>Murti</h1>
+      <p class="tagline">text &amp; image → 3D · latent diffusion · 100% in-browser</p>
+    </div>
+  </div>
+  <div class="header-right">
+    <span id="model-status" class="status">loading models…</span>
+    <a class="gh-link" href="https://github.com/saketkumar-18/murti" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</header>
+
+<main>
+  <aside id="controls">
+    <section class="panel">
+      <h2>Text → 3D</h2>
+      <label for="prompt">Prompt</label>
+      <input id="prompt" type="text" value="a rocket" autocomplete="off"
+             placeholder="e.g. a tall cylinder" />
+      <div id="examples" class="chips"></div>
+
+      <div class="row">
+        <div class="field">
+          <label for="seed">Seed</label>
+          <input id="seed" type="number" value="0" min="0" />
+        </div>
+        <div class="field">
+          <label for="cfg">CFG <span id="cfg-val">3.0</span></label>
+          <input id="cfg" type="range" min="1" max="7" step="0.5" value="3" />
+        </div>
+        <div class="field">
+          <label for="steps">Steps <span id="steps-val">25</span></label>
+          <input id="steps" type="range" min="10" max="50" step="5" value="25" />
+        </div>
+      </div>
+
+      <button id="generate" class="primary" disabled>Generate 3D</button>
+      <div id="progress-wrap" class="hidden">
+        <div id="progress-bar"><div id="progress-fill"></div></div>
+        <span id="progress-text"></span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Image → 3D</h2>
+      <p class="hint">Upload a silhouette photo (object on plain background works best). A visual hull is carved in-browser.</p>
+      <input id="image-input" type="file" accept="image/*" />
+      <div id="image-preview-wrap" class="hidden">
+        <img id="image-preview" alt="uploaded silhouette preview" />
+        <button id="image-generate" class="primary" disabled>Carve 3D hull</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Export</h2>
+      <div class="row export-row">
+        <button id="dl-glb" disabled title="glTF binary — games & web">GLB</button>
+        <button id="dl-obj" disabled title="Wavefront OBJ">OBJ</button>
+        <button id="dl-stl" disabled title="Binary STL — 3D printing">STL</button>
+      </div>
+      <div id="mesh-stats" class="stats"></div>
+    </section>
+
+    <section class="panel about">
+      <h2>How it works</h2>
+      <p>A 3D-convolution VAE compresses 32³ occupancy grids into 8³ latents; a
+      classifier-free-guided diffusion model generates latents from your prompt;
+      marching cubes turns the result into a mesh. All inference runs locally via
+      ONNX Runtime WebAssembly — nothing is uploaded.</p>
+    </section>
+  </aside>
+
+  <div id="viewport">
+    <canvas id="canvas3d"></canvas>
+    <div id="viewport-overlay">
+      <label class="toggle"><input type="checkbox" id="wireframe" /> wireframe</label>
+      <label class="toggle"><input type="checkbox" id="autorotate" checked /> auto-rotate</label>
+    </div>
+    <div id="empty-state">
+      <div class="empty-icon">🗿</div>
+      <p>Type a prompt and hit <strong>Generate 3D</strong> —<br/>your model appears here.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <span>Murti v1.0 · capstone #19 · trained with PyTorch, served as ONNX/WASM</span>
+  <span id="gen-time"></span>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.17.1/dist/ort.min.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
